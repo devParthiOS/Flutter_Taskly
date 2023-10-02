@@ -15,13 +15,13 @@ class _HomePageState extends State<HomePage> {
   String? newTaskConstant;
   Box? _box;
 
-  late double _deviceWidth;
+  // late double _deviceWidth;
   late double _deviceHeight;
 
   @override
   Widget build(BuildContext context) {
     _deviceHeight = MediaQuery.of(context).size.height;
-    _deviceWidth = MediaQuery.of(context).size.width;
+    // _deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -92,11 +92,9 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget _addTaskButton() {
-    return Container(
-      child: FloatingActionButton(
-        onPressed: _displayTaskPopup,
-        child: const Icon(Icons.add),
-      ),
+    return FloatingActionButton(
+      onPressed: _displayTaskPopup,
+      child: const Icon(Icons.add),
     );
   }
 
